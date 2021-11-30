@@ -6,19 +6,38 @@
 </head>
 <body>
 <script>
+    // function tryRemoveFromArray(arr, index) {
+    //     if (index >= 0 && index < arr.length) {
+    //         let newArr = [];
+    //         for (let i = 0; i < arr.length; i++) {
+    //             if (i !== index) {
+    //                 newArr.push(arr[i]);
+    //             }
+    //         }
+    //         arr = newArr;
+    //     }
+    //     return arr;
+    // }
+    // alert(tryRemoveFromArray())
+
     function tryRemoveFromArray(arr, index) {
-        if (index >= 0 && index < arr.length) {
-            let newArr = [];
-            for (let i = 0; i < arr.length; i++) {
-                if (i !== index) {
-                    newArr.push(arr[i]);
+        let arrNew = []
+        if (index < 0 || index > arr.length - 1) {
+            return arr
+        } else {
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (i < index) {
+                    arrNew[i] = arr[i]
+                } else {
+                    arrNew[i] = arr[i + 1]
                 }
             }
-            arr = newArr;
         }
-        return arr;
+        return arrNew
     }
-    alert(tryRemoveFromArray())
+
+    let arr = [1, 2, 3, 4, 5];
+    console.log(tryRemoveFromArray(arr, index));
 </script>
 </body>
 </html>

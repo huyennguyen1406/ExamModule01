@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bai 3</title>
 </head>
 <body>
 <script>
-    let str1 = prompt("Chuỗi 1");
-    let str2 = prompt("Chuỗi 2");
-
     function checkString(str1, str2) {
         let check = false;
         for (let i = 0; i < str2.length; i++) {
             let count = 0;
             for (let j = 0; j < str1.length; j++) {
-                if (str1[j] === str2[j + i]) {
-                    count++
+                if (str1[j] === str2[i + j]) {
+                    count++;
                 }
             }
             if (count === str1.length) {
                 check = true;
             }
         }
-        return check;
+        return check
     }
 
-    alert(checkString(str1, str2));
+    let str1 = prompt("String 1: ");
+    let str2 = prompt("String 2: ");
+    console.log(checkString(str2, str1));
 </script>
 </body>
 </html>

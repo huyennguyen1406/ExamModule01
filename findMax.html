@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so lon nhat trong mang</title>
+</head>
+<body>
+<script>
+    let sySo = Number(prompt("Mời nhập số lượng học sinh"));
+    let bangDiem = [];
+    for (let i =0; i < sySo;i++) {
+        bangDiem[i] = parseFloat(prompt('Nhập điểm số của người thứ '+i));
+    }
+    document.write("Bảng điểm vừa nhập là: " + bangDiem + "<br/>");
+    function findMax(arr) {
+        let max = arr[0];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+            }
+        }
+        document.write("Điểm số có cao nhất của lớp là: " + max);
+    }
+    findMax(bangDiem);
+</script>
+</body>
+</html>
