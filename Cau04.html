@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cau 4</title>
+    <title>Câu 4</title>
 </head>
 <body>
 <script>
@@ -32,16 +32,19 @@
         }
 
         toString() {
-            return "Name: " + this.name + "; " + "Weight: " + this.weight;
+            return "Name: " + this.name + ", " + "Weight: " + this.weight;
         }
     }
+    let objAnimal1 = new Animal();
+    objAnimal1.setName("Elephant");
+    objAnimal1.setWeight(45.6);
 
-    let objAnimal1 = new Animal("Elephant", 45.6);
-    console.log(objAnimal1.toString());
-
+    document.write(objAnimal1.toString());
+    document.write("</br>");
     let objAnimal2 = new Animal("Name", "Weight");
     objAnimal2.setName("Mouse");
-    console.log(objAnimal2.getName());
+    objAnimal2.setWeight(10);
+    document.write(objAnimal2.toString());
 </script>
 </body>
 </html>
